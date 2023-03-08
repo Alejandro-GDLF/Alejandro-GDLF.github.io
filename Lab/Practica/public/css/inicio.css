@@ -1,0 +1,132 @@
+div.inicio {
+    background-image: url(../resources/inicio.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    height: min(calc(100vw * 9/16), calc(100vh - 56px));
+    padding: 0;
+}
+
+div.inicio-mask {
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(3px);
+
+    padding:0;
+    margin:0;
+}
+
+div.title-wrap {
+    padding-top: 15%;
+}
+
+h1.title-description {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Minecraft Font';
+    font-size: 10vw;
+    color: white;
+    font-weight: bold;
+}
+
+p.subtitle-description {
+    text-align: center;
+    color: white;
+    font-style: italic;
+    font-family: "Minecraft Font";
+    font-size: 3vw;
+
+    position: relative;
+}
+
+div.inicio-card {
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    height: 50%;
+
+    border-radius: 5px;
+}
+
+div.inicio-card + div.inicio-card{
+    margin-top: 30px;
+}
+
+div.description-row {
+    align-content: center;
+    height: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+div.description-title {
+    height: 100%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+div.description-title + div.description {
+    border-left: 2px solid rgba(0,0,0,0.1);
+}
+
+h2.description {
+    text-align: center;
+
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+p.description {
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    text-align: justify;
+    text-align-last: center;
+
+    font-size: 1rem;
+}
+
+/* For small divices */
+@media (max-width: 768px ){
+
+    div.description {
+        height: 100%;
+    }
+
+    div.description-title,
+    div.description {
+        width:100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    div.description::before{
+        content : "";
+        position: absolute;
+        left: 12.5%;
+        height  : 1px;
+        width   : 75%;
+        border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+
+    div.description-row {
+        display: block;
+        align-items: center;
+    }
+
+    p.description,
+    h2.description {
+        width: 100%;
+        text-align: center;
+    }
+}

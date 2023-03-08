@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Minecraft Font';
+    src: url('../resources/minecraft-font.ttf');
+}
+
+/* Remove scroll bar from webpage. y*/
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+header {
+    z-index: 999;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: inherit;
+}
+
+a.navbar-brand {
+    font-family: "Minecraft Font";
+    font-size: 20px;
+}
+
+a.nav-link {
+    cursor: pointer;
+}
+
+a.dropdown-item:hover {
+    background-color: rgba(0, 0, 0, 0.125);
+    
+}
