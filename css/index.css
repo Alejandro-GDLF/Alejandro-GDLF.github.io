@@ -35,8 +35,9 @@ section.projects h2 {
     margin: 30px;
 }
 
-section.projects a {
-    text-decoration: none;
+section.projects a,
+section.projects a:visited {
+    text-decoration: underline;
     cursor: pointer;
 
     color: var(--text-color);
@@ -45,4 +46,5 @@ section.projects a {
 section.projects ul {
     margin: auto;
     margin-left: 50px;
+    color: var(--text-color);
 }
