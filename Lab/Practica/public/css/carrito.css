@@ -1,0 +1,12 @@
+.imagen-item {
+    max-height: 75%;
+}
+
+.item {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+h1 {
+    padding-left: 30px;
+    font-family: "Minecraft Font";
+}

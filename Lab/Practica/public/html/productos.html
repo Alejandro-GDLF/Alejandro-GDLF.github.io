@@ -1,26 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+  <meta charset="utf-8">
+    <title>Mineshop</title>
     <link href="./css/productos.css" rel="stylesheet"/>
     <script>
       Cargar('./html/overworld.html', 'productos_section');
+
+      function cambiarTab(event) {
+        let tab = {
+          "overworld-a":"./html/overworld.html",
+          "nether-a": "./html/nether.html",
+          "end-a":"./html/end.html"
+        }
+
+        let id = event.target.id;
+
+        Cargar(tab[id], "productos_section");
+
+        // Remove active class for all instances of the div.
+        let div_row = document.getElementById("pseudoheader-row");
+
+        console.log(div_row.childNodes);
+
+        for(let i = 0; i < div_row.childNodes.length; i++){
+          let div = div_row.childNodes[i];
+          try{
+            div.classList.remove("active");
+          }
+          catch(something)
+          {
+            console.log(something);
+          }
+        }
+        event.target.parentElement.classList.add("active");
+        console.log(event.target.parentElement);
+      }
     </script>
 </head>
 <body>
     <div class="container-fluid pseudoheader text-center">
-        <div class="row align-items-center">
+        <div id="pseudoheader-row" class="row align-items-center">
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
-                <a id="overworld-a" onclick="Cargar('./html/nether.html', 'productos_section')" class="pseudoheader-item">Nether</a>
+                <a id="nether-a" onclick="cambiarTab(event)" class="pseudoheader-item">Nether</a>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center active">
-                <a id="nether-a" onclick="Cargar('./html/overworld.html', 'productos_section')" class="pseudoheader-item">Overworld</a>
+                <a id="overworld-a" onclick="cambiarTab(event)" class="pseudoheader-item">Overworld</a>
             </div>
             <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center">
-                <a id="end-a" onclick="Cargar('./html/end.html', 'productos_section')" class="pseudoheader-item">End</a>
+                <a id="end-a" onclick="cambiarTab(event)" class="pseudoheader-item">End</a>
             </div>
         </div>
     </div>
-    <section name="ofertas">
+    <section>
         <div class="container-md" style="margin-top: 20px;">
         <div id="carouselOfertas" class="carousel slide">
             <div class="carousel-inner">

@@ -1,0 +1,16 @@
+.login-page {
+    margin: 10%;
+}
+
+h3 {
+    font-family: "Minecraft Font";
+}
+
+button {
+    display: block;
+}
+
+input {
+    display: block;
+    margin: 4px;
+}

@@ -25,6 +25,10 @@ header {
     background-color: white;
 }
 
+ul.dropdown-menu {
+    z-index:999;
+}
+
 a.navbar-brand {
     font-family: "Minecraft Font";
     font-size: 20px;
@@ -37,4 +41,8 @@ a.nav-link {
 a.dropdown-item:hover {
     background-color: rgba(0, 0, 0, 0.125);
     
+}
+
+footer {
+    background-color: white;
 }
