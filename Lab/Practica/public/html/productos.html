@@ -21,33 +21,32 @@
         // Remove active class for all instances of the div.
         let div_row = document.getElementById("pseudoheader-row");
 
-        console.log(div_row.childNodes);
-
         for(let i = 0; i < div_row.childNodes.length; i++){
           let div = div_row.childNodes[i];
           try{
-            div.classList.remove("active");
-          }
-          catch(something)
-          {
-            console.log(something);
+            if (div.classList.contains("active")){
+              div.classList.remove("active");
+              div.removeChild(document.getElementById("steve-indicator"));
+            }
+          }catch(smt){
           }
         }
         event.target.parentElement.classList.add("active");
-        console.log(event.target.parentElement);
+        event.target.parentElement.innerHTML += '<img id="steve-indicator" class="steve-face" src="./resources/steve-face.png" alt=".."/>';
       }
     </script>
 </head>
 <body>
     <div class="container-fluid pseudoheader text-center">
         <div id="pseudoheader-row" class="row align-items-center">
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center mc-button">
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ms-10 me-10 d-flex justify-content-center mc-button">
                 <a id="nether-a" onclick="cambiarTab(event)" class="pseudoheader-item">Nether</a>
             </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center mc-button active">
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ms-10 me-10 d-flex justify-content-center mc-button active">
                 <a id="overworld-a" onclick="cambiarTab(event)" class="pseudoheader-item">Overworld</a>
+                <img id="steve-indicator" class="steve-face" src="./resources/steve-face.png" alt=".."/>
             </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center mc-button">
+            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ms-10 me-10 d-flex justify-content-center mc-button">
                 <a id="end-a" onclick="cambiarTab(event)" class="pseudoheader-item align-middle">End</a>
             </div>
         </div>
