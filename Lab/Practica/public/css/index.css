@@ -50,3 +50,7 @@ a.dropdown-item:hover {
 footer {
     background-color: white;
 }
+
+footer p {
+    margin: 0;
+}
