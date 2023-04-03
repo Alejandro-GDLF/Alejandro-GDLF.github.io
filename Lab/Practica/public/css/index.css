@@ -29,6 +29,10 @@ ul.dropdown-menu {
     z-index:999;
 }
 
+ul.dropdown-menu.carrito li:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 a.navbar-brand {
     font-family: "Minecraft Font";
     font-size: 20px;
