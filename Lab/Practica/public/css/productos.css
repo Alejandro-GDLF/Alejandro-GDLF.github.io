@@ -29,7 +29,7 @@ a.pseudoheader-item {
     overflow: visible;
 
     font-family: 'Minecraft font';
-    font-size: clamp(1.5rem, 2px, 2rem);
+    font-size: clamp(1.3rem, 40%, 3rem);
     text-align: center;
     color: white;
 }
