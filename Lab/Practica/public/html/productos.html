@@ -7,19 +7,19 @@
     <script src="./js/productos.js"></script>
 </head>
 <body>
-    <div class="container-fluid pseudoheader text-center">
-        <div id="pseudoheader-row" class="row align-items-center">
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ms-10 me-10 d-flex justify-content-center mc-button">
+    <div class="container-fluid pseudoheader">
+      <div id="wrapper" class="wrapper">
+            <div class="pseudoheader-button mc-button">
                 <a id="nether-a" onclick="cambiarTab(event)" class="pseudoheader-item">Nether</a>
             </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ms-10 me-10 d-flex justify-content-center mc-button active">
+            <div class="pseudoheader-button mc-button active">
                 <a id="overworld-a" onclick="cambiarTab(event)" class="pseudoheader-item">Overworld</a>
-                <img id="steve-indicator" class="steve-face" src="./resources/steve-face.png" alt=".."/>
+                <img id="steve-indicator" class="steve-indicator" src="./resources/steve-face.png" alt=".."/>
             </div>
-            <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4 ms-10 me-10 d-flex justify-content-center mc-button">
+            <div class="pseudoheader-button mc-button">
                 <a id="end-a" onclick="cambiarTab(event)" class="pseudoheader-item align-middle">End</a>
             </div>
-        </div>
+      </div>
     </div>
     <section>
         <div class="container-md" style="margin-top: 20px;">
