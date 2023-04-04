@@ -1,5 +1,8 @@
 Cargar('./html/overworld.html', 'productos_section');
 
+let width = document.getElementById("mc-button-1").offsetWidth;
+document.getElementById("wrapper").style.setProperty("--button-width", '' + width + 'px');
+
 function cambiarTab(event) {
     const tab = {
         "overworld-a":"./html/overworld.html",
@@ -25,9 +28,4 @@ function cambiarTab(event) {
     });
 
     event.target.parentElement.classList.add('active');
-
-    let width = event.target.parentElement.offsetWidth;
-    
-    document.getElementById("steve-indicator")
-        .style.transform = "translateX(" + ((width + 5) * position[id]) + "px)";
 }

@@ -19,6 +19,8 @@ div.wrapper {
     height: 100%;
 
     position: relative;
+
+    --button-width: 100px;
 }
 
 a.pseudoheader-item {
@@ -65,6 +67,17 @@ div.pseudoheader-button {
     transition: 0.7s;
 }
 
+div.mc-button:nth-child(1).active ~ .steve-indicator {
+    transform: translateX(calc((var(--button-width) + 5px) * -1));
+}
+
+div.mc-button:nth-child(2).active ~ .steve-indicator {
+    transform: translateX(0);
+}
+
+div.mc-button:nth-child(3).active ~ .steve-indicator {
+    transform: translateX(calc(var(--button-width) + 5px));
+}
 section ~ section {
     margin: 10px;
 }
