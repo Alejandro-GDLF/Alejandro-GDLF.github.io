@@ -6,6 +6,10 @@ h3 {
     font-family: "Minecraft Font";
 }
 
+form.login-form {
+    width: 188px;
+}
+
 button {
     display: block;
 }
@@ -13,4 +17,22 @@ button {
 input {
     display: block;
     margin: 4px;
+}
+
+button {
+    width: 100%;
+    margin: 4px;
+    color: white;
+
+    font-weight: bold;
+    font-size: 1.25rem;
+
+    background: url(../resources/mcbutton.png) no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    height: 50px;
+}
+
+button:hover {
+    background-image: url(../resources/mcbutton-hover.png);
 }
