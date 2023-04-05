@@ -1,12 +1,91 @@
-.imagen-item {
-    max-height: 75%;
-}
-
-.item {
-    border: 1px solid rgba(0,0,0,0.1);
-}
-
-h1 {
-    padding-left: 30px;
+h1, h2 {
     font-family: "Minecraft Font";
+}
+
+section.summary {
+    position: fixed;
+    right: 0;
+    top: 56px;
+
+    height: 100%;
+    width: 30%;
+    z-index: 500;
+    background-color: rgba(0,0,0,0.1);
+
+    display: block;
+}
+
+section.summary > div {
+    margin: 0 10%;
+    padding: 10% 0;
+
+    border-bottom: 2px solid rgba(0,0,0,0.25);
+}
+
+div.subtotal,
+div.c-entrega,
+div.estimated-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+div.promo-code {
+    display: block;
+}
+
+div.promo-code label{
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+div.promo-code form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    height: 35px;
+}
+
+div.promo-code form input {
+    width: 1px;
+    flex: 5;
+
+    border: 2px solid rgba(0,0,0,0.4);
+    border-radius: 5px;
+}
+
+div.promo-code form button {
+    flex: 1;
+
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+div.checkout-buttons button{
+    display: block;
+    width: 100%;
+    margin: 5px;
+
+    border-radius: 5px;
+}
+
+section.carrito {
+    margin: 3%;
+    margin-right: 30%;
+}
+
+@media (width < 768px){
+    body {
+        display: block;
+    }
+
+    section.summary {
+        position: static;
+        width: 70%;
+        margin: 0 15%;
+    }
 }

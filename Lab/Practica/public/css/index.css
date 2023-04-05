@@ -50,6 +50,7 @@ a.dropdown-item:hover {
 }
 
 footer {
+    z-index: 999;
     background-color: white;
 }
 
