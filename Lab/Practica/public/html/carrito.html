@@ -6,35 +6,18 @@
     <link href="./css/carrito.css" rel="stylesheet"/>
 </head>
 <body>
-    <h1>Tu carrito</h1>
-    <section id="carrito" class="carrito">
-        <div class="container-md carrito">
-            <div class="container-fluid ">
-                <div class="row">
-                <div class="col-4">
-                    <img class="imagen-item" src="./resources/cobblestone.webp" alt="Cobblestone">
-                </div>
-                <div class="col-8">
-                    <h2>Cobblestone</h2>
-                    <p>Una roca</p>
-                    <p>Precio: 34 E</p>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section id="summary" class="summary">
         <div class="order-summary">
             <h2>Resumen del carrito</h2>
             <div class="subtotal">
-                <label for="subtotal">Subtotal:</label><p id="class">34</p>
+                <label for="subtotal">Subtotal:</label><span id="class">34</span>
             </div>
             <div class="c-entrega">
-                <label for="c-entrega">Costes de entrega:</label><p id="c-entrega">44</p>
+                <label for="c-entrega">Costes de entrega:</label><span id="c-entrega">44</span>
             </div>
         </div>
         <div class="estimated-total">
-            <h3>Total: </h3><p id="total">34</p>
+            <label for="total">Total: </label> <span id="total">34</span>
         </div>
         <div class="promo-code">
             <label for="promo-code">Código de promoción:</label>
@@ -47,6 +30,39 @@
             <button>Pagar</button>
             <button>Pagar por bizum</button>
             <button>PayPal</button>
+        </div>
+    </section>
+    <h1>Tu carrito</h1>
+    <section id="carrito" class="carrito">
+        <div id= "1" class="container-md carrito">
+            <div class="container-fluid ">
+                <div class="row">
+                <div class="col-4 img">
+                    <img class="imagen-item" src="./resources/cobblestone.webp" alt="Cobblestone">
+                </div>
+                <div class="col-8 info">
+                    <span id="nombre">Cobblestone</span>
+                    <span id="descripcion">Una roca</span>
+                    <span>Cantidad: <input id="cantidad" type="number"/> </span>
+                    <span>Precio: <span id="precio"></span> <span></span></span>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div id= "2" class="container-md carrito">
+            <div class="container-fluid ">
+                <div class="row">
+                <div class="col-4 img">
+                    <img class="imagen-item" src="./resources/cobblestone.webp" alt="Cobblestone">
+                </div>
+                <div class="col-8 info">
+                    <span id="nombre">Cobblestone</span>
+                    <span id="descripcion">Una roca</span>
+                    <span id="precio">Precio: 34 <span></span></span>
+                </div>
+                </div>
+            </div>
         </div>
     </section>
 </body>
