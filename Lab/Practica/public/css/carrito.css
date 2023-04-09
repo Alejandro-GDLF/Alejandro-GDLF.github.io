@@ -100,15 +100,15 @@ div.checkout-buttons button:hover{
 }
 
 /* Devices smaller than md */
-@media (max-width: 700px){
+@media (max-width: 767.99px){
     body {
         display: block;
     }
 
     section.summary {
         position: static;
-        width: 70%;
-        margin: 0 15%;
+        width: 90%;
+        margin: 0 5%;
         float: none;
     }
 }
@@ -116,6 +116,12 @@ div.checkout-buttons button:hover{
 section.carrito {
     margin: 3%;
     margin-right: 33%;
+}
+
+@media (max-width: 767.99px){
+	section.carrito {
+		margin: 0 5%;
+	}
 }
 
 div.carrito {
@@ -129,37 +135,66 @@ div.carrito:last-child {
     border: none;
 }
 
+div.img {
+	aspect-ratio: 1 / 1;
+	padding: 0 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 div.img > img {
-    height: 100%;
-    max-height: 200px;
-    aspect-ratio: 1;
-    align-items: center;
-    vertical-align: middle;
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1/1;
 }
 
 div.info {
-    position: relative;
-
-    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
 }
 
 div.info > span {
-    display: block;
+    font-size: clamp(0.75rem, 2vw, 1.2rem);
+    overflow-wrap: break-word;
+    word-wrap: break-word;
 }
 
-div.info #cantidad {
-    width: 50px;
-    border-radius: 7px;
-    border: 2px solid var(--border-color);
+div.info > span.precio-wrapper {
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+span.emerald {
+	height: 100%;
+	aspect-ratio: 1/1;
+	display: inline-block;
+	background: url("../resources/emerald.png") no-repeat;
+	background-position: center;
+	background-size: 100% 100%;
 }
 
 div.info #nombre {
     font-family: 'Minecraft Font';
     font-weight: bold;
-    font-size: 1.25em;
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
 }
 
 div.info #descripcion {
     margin: 0;
     padding: 0;
+    flex: 1;
+    width: 100%;
+}
+
+div.info #cantidad {
+    width: 50px;
+    
+    margin-bottom: 10%;
+    
+    border-radius: 7px;
+    border: 2px solid var(--border-color);
 }
